@@ -15,9 +15,9 @@ const ibm = IBM_Plex_Mono({
 
 export default function Page() {
   return (
-    <div className="flex flex-row justify-center items-center h-screen">
-      <Logo className="absolute top-4 left-4" color="white" />
-      <div className="w-1/2 flex flex-col justify-center items-center">
+    <div className="flex h-screen flex-col items-center md:flex-row">
+      <Logo className="absolute top-10 left-10 z-20" color="white" />
+      <div className="bg-black my-5 p-5 z-10 h-screen flex flex-col justify-center items-center rounded-lg md:mt-0 md:rounded-none md:w-1/2 md:top-4 md:left-4 ">
         <h1 className={`${ibm.className} font-bold text-2xl text-slate-200`}>
           Login with your acccount
         </h1>
@@ -45,7 +45,7 @@ export default function Page() {
           <Button type="primary">Log in</Button>
         </form>
       </div>
-      <div className="relative w-1/2 h-screen">
+      <div className="absolute top-0 left-0 w-screen h-screen md:w-1/2 md:relative z-0">
         <Image src="/login.jpg" alt="Login" fill className="object-cover" />
       </div>
     </div>
